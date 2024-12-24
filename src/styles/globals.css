@@ -1,0 +1,72 @@
+/* Only global styling CSS Rules should be placed here, for component specific styling use CSS Modules */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #21AB71;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #21AB71;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+  overflow: auto; /* Enable scrolling */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+  opacity: 0; /* Hide the scrollbar by default */
+  transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+  border-radius: 4px; /* Rounded corners for track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(33, 171, 113, 0.7); /* Semi-transparent thumb */
+  border-radius: 4px; /* Rounded corners for thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 171, 113, 1); /* Full opacity on hover */
+}
+
+/* Show the scrollbar when scrolling */
+.custom-scrollbar:focus::-webkit-scrollbar,
+.custom-scrollbar:hover::-webkit-scrollbar {
+  opacity: 1; /* Show scrollbar when hovering */
+}
+
+.custom-scrollbar::-webkit-scrollbar:horizontal {
+  height: 8px; /* Height for horizontal scrollbar */
+}
